@@ -1,0 +1,5 @@
+<div [ngClass]="containerClassesStr">
+    <div [ngClass]="itemClassesStr" *ngFor="let item of items">
+        <ng-container [ngTemplateOutlet]="itemTemplateRef" [ngTemplateOutletContext]="{ item: item, dispatch: _dispatch }"></ng-container>
+    </div>
+</div>

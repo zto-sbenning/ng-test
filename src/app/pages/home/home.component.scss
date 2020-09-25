@@ -1,0 +1,55 @@
+:host {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+::ng-deep app-content-list {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+::ng-deep app-content-list > .container-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+::ng-deep app-content-list > .container-list > .list-item {
+    margin-bottom: 100px;
+}
+
+.item-container {
+}
+
+::ng-deep app-summary {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+::ng-deep app-summary > .summary-list {
+    flex: 1;
+}
+
+::ng-deep app-summary > .summary-list > .summary-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: gainsboro;
+    border-bottom: solid 1px gainsboro;
+    cursor: pointer;
+}

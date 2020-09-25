@@ -1,0 +1,5 @@
+<div [ngClass]="containerClassesStr">
+    <div [ngClass]="itemClassesStr" *ngFor="let item of items" (click)="dispatch(item)">
+        <span>{{ item }}</span>
+    </div>
+</div>

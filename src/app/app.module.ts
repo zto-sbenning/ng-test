@@ -8,12 +8,16 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { ContentListComponent } from './components/content-list/content-list.component';
+import { SummaryComponent } from './components/summary/summary.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    ContentListComponent,
+    SummaryComponent
   ],
   imports: [
     BrowserModule,

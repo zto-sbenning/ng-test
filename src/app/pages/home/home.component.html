@@ -1,5 +1,29 @@
-<mat-toolbar>
+
+<mat-toolbar (click)="goto100()">
     <span>HOME</span>
 </mat-toolbar>
 
-<p>home works!</p>
+<div class="container">
+    
+    <app-content-list
+        [summaryId]="'list1'"
+        [containerClasses]="['container-list']"
+        [itemClasses]="['list-item']"
+        [items]="items"
+        [itemTemplateRef]="itemTemplate"
+    ></app-content-list>
+
+    <ng-template #itemTemplate let-item="item" let-dispatch="dispatch">
+        <div class="item-container">
+            <span (click)="dispatch(item.name)">{{ item.name }}</span> -- <span>{{ item.description }}</span>
+        </div>
+    </ng-template>
+    
+    <app-summary
+        [summaryId]="'list1'"
+        [containerClasses]="['summary-list']"
+        [itemClasses]="['summary-item']"
+        [items]="summary"
+    ></app-summary>
+
+</div>
